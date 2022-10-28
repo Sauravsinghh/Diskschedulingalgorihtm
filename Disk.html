@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <title>Disk Scheduling Algorithms</title>
+    
+    <!--CSS and Script linking-->
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+  </head>
+
+  <body>
+    <header>
+      <nav id="header-nav" class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+  
+            <div class="navbar-brand">
+              <a href="#"><h1>Disk Scheduling Algorithms</h1></a>
+            </div>
+  
+            <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+  
+          <div id="collapsable-nav" class="collapse navbar-collapse">
+             <ul id="nav-list" class="nav navbar-nav navbar-right">
+              
+              <li>
+                <a href="Simulate.html">
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i><br class="hidden-xs"> Simulate</a>
+              </li>
+
+            </ul><!-- #nav-list -->
+          </div><!-- .collapse .navbar-collapse -->
+        </div><!-- .container -->
+      </nav><!-- #header-nav -->
+    </header>
+
+
+    <div class="sec-nav">
+      <ul class="outer">
+        <li class="active inner"><a href="#home">FCFS</a></li>
+        <li class="inner"><a href="#about">SSTF</a></li>
+        <li  class="inner"><a href="#portfolio">SCAN </a></li>
+        <li class="inner"><a href="#contact">CSAN</a></li>
+        <li class="inner"><a href="#about">LOOK</a></li>
+        <li class="inner"><a href="#portfolio">CIRCULAR LOOK</a></li>
+
+        </li>
+      </ul>
+    </div>
+    
+    <div class="diskinfo">
+      <p class="hd ">Various Disk Scheduling Algorithms</p>
+
+      <div class="cont">
+        <div>
+          <a id="algo" href="Simulate.html"><h2 class=" heady">First Come First Serve (FCFS)<br></h2><hr style="width: 30%; border-width: 2px; background-color: grey;"></a><br>
+          <a href="Simulate.html"><img style="cursor: pointer;" src="/Screenshots/fcfs.png" alt=""></a>
+        </div>
+        <div>
+          <a id="algo" href="Simulate.html"><h2 class=" heady">Shortest Seek Time First (SSTF)<br></h2><hr style="width: 30%; border-width: 2px;"></a><br>
+          <!-- <p class="description">Shortest seek time first (SSTF) algorithm selects the disk I/O request which requires the least disk arm movement from its current position regardless of the direction. It reduces the total seek time as compared to FCFS. It allows the head to move to the closest track in the service queue.</p> -->
+          <img src="/Screenshots/sstf.png" alt="">
+        </div>
+        <div>
+          <a id="algo" href="Simulate.html"><h2 class=" heady">SCAN<br><br></h2><hr style="width: 30%; border-width: 2px;"></a><br>
+          <img src="/Screenshots/scan.png" alt="">
+          <!-- <p class="description">In SCAN disk scheduling algorithm, head starts from one end of the disk and moves towards the other end, servicing requests in between one by one and reach the other end. Then the direction of the head is reversed and the process continues as head continuously scan back and forth to access the disk.</p> -->
+        </div>
+        <div>
+         
+         <a id="algo" href="Simulate.html"><h2 class=" heady">Circular SCAN (C-SCAN)<br></h2><hr style="width: 30%; border-width: 2px;"></a><br>
+         <img src="/Screenshots/c-scan.png" alt="">
+         <!-- <p class="description">Circular SCAN (C-SCAN) scheduling algorithm is a modified version of SCAN disk scheduling algorithm that deals with the inefficiency of SCAN algorithm by servicing the requests more uniformly. Like SCAN (Elevator Algorithm) C-SCAN moves the head from one end servicing all the requests to the other end.</p> -->
+        </div>
+        <div>
+          <a id="algo" href="Simulate.html"><h2 class=" heady">LOOK<br></h2><hr style="width: 30%; border-width: 2px;"></a><br>
+          <img src="/Screenshots/look.png" alt="">
+          <!-- <p class="description">The LOOK algorithm services request similarly as SCAN algorithm meanwhile it also “looks” ahead as if there are more tracks that are needed to be serviced in the same direction. If there are no pending requests in the moving direction the head reverses the direction and start servicing requests in the opposite direction. </p> -->
+        </div>
+        <div class=" heady">
+          <a id="algo" href="Simulate.html"><h2 class="heady">Circular LOOK<br></h2><hr style="width: 30%; border-width: 2px;"></a><br>
+          <img src="/Screenshots/look.png" alt="">
+          <!-- <p class="description">In this algorithm, the head services requests only in one direction until all the requests in this direction are not serviced and then jumps back to the farthest request on the other direction and service the remaining requests which gives a better uniform servicing as well as avoids wasting seek time for going till the end of the disk.</p> -->
+        </div>
+      </div>
+    </div>
+
+
+    
+    <!-- <script src="js/jquery-2.1.4.min.js"></script> -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="myscript.js"></script>
+
+  </body>
+
+</html>
